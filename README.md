@@ -67,7 +67,7 @@ http://localhost:5000
  ```
 
 You should be able to: 
-- Register a new account with caregiver ID 2 (or alternatively create your own caregiver login and it will be ID 3)
+- Register a new account with caregiver ID 2 (or alternatively create your own caregiver login and it will be ID 26 (I did a lot of testing with users!))
 - On registration complete a reflective motivation exercise 
 - Log in as a User
 - Explore the pre-meal interface 

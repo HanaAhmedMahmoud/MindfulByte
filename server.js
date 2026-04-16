@@ -29,7 +29,6 @@ let db = new sqlite3.Database("./database/mindfulByte.db" , (err) => {
 // * database apis *
 
 // authentication
-//HANA COME BACK TO DO HASHING FR THIS IS UNSAFE 
 app.post('/validate-user', (req,res) => {
     const {username, password} = req.body;
     db.all(`SELECT * FROM users WHERE username = ? and password = ?`, [username, password], (err, user) => {
@@ -56,7 +55,6 @@ app.post('/register-user', (req,res) => {
           } else {
               const id = this.lastID;
               const caregiverIDInt = Number(caregiverID)
-              //should check if id exists but for now assume it does
               db.run(`INSERT INTO caregivers_patients (user_id, caregiver_id) VALUES (?, ?)`, [id, caregiverIDInt], (err) => {
                   if (err) {
                       console.error('Database insert error:', err);

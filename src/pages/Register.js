@@ -66,7 +66,7 @@ const Register = () => {
                 <InputField label="Username:" value={username} onChange={setUsername} />
                 <InputField label="Password:" type="password" value={password} onChange={setPassword} />
               </div>
-            <button onClick={() => navigate('/')}>
+            <button onClick={handleRegister}>
               create account
             </button>
             {error && <h3 className="error">{error}</h3>}
