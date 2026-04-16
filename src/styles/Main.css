@@ -1,0 +1,747 @@
+/* body */
+body {
+  background-image: url('../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;         
+  justify-content: center;  
+  align-items: center;
+  font-family: "Poltawski Nowy", serif;
+}
+
+/* typography */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+  margin: 10px 0;
+  width: 100%;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    color: red; 
+}
+
+p {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+span {
+  font-size: 18px;
+}
+
+.link {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+
+
+/* inputs*/
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: solid #D9D9D9;
+  border-radius: 8px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* buttons */
+button {
+  width: 200px;
+  height: 60px; 
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: white;
+  border: solid #B3B3B3;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Poltawski Nowy", serif;
+}
+
+.LoginBox button {
+  margin: 20px auto;
+  margin-bottom: 0px;
+}
+
+.RegisterBox button {
+  margin: 20px auto;
+}
+
+
+/* login boxes */
+.LoginBox,
+.RegisterBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  background-color: #F3F3F3;
+  outline: 1px solid #9C9C9C;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.LoginBox {
+  width: 400px;
+  height: 400px;
+}
+
+.RegisterBox {
+  width: 450px;
+  height: 500px;
+}
+
+/* layouts */
+.group {
+  padding: 0 30px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 30px;
+  margin: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 5px;
+}
+
+/* user page */
+.quoteBox {
+  width: 800px;
+  height: 80px;
+  border: 1px solid #B3B3B3;
+  font-size: 16px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twoBoxes {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.box {
+  flex: 1;
+  height: 350px;
+  border: 1px solid #B3B3B3;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.box2 {
+  flex: 1;
+  height: 350px;
+  border: 1px solid #B3B3B3;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+}
+
+textarea{
+    background-color: #E1DFDF;
+    border: 1px solid #868585;
+    border-radius: 10px;
+    width: 85%; 
+    height: 150px;
+    resize: none;
+    padding:10px;
+    margin:10px;
+}
+
+.moodSlider{
+    width:265px; 
+    height: 60px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    border: 1px solid #9C9C9C;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.moodSlider button{
+    flex: 1;
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.moodSlider button img {
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+}
+
+.moodSlider button.active {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.moodSlider .mood-wrapper{
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; 
+}
+
+.moodSlider .mood-wrapper img{
+    width:32px; 
+    height:32px;
+    z-index:1; 
+}
+
+.moodSlider .mood-wrapper.active{
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* caregiver */
+.caregiverBox{
+  place-content: center;
+  background-color: #ffffff;
+  outline: 1px solid #9C9C9C;
+  border-radius: 30px;
+  text-align: center;
+  width: 700px;
+  height: 500px;
+}
+
+.caregiverBox h1{
+  text-align: left;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  margin: 0px; 
+}
+
+.scrollBox{
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: scroll;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  align-items: center;
+  padding:10px;
+}
+
+.scrollBox2{
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: scroll;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:0px;
+  align-items: center;
+  padding:10px;
+}
+
+.scrollItemButtons{
+  width:90%;
+  min-height: 50px;
+  background-color: aliceblue;
+  border: #e0e0e0 solid 1px;
+  border-radius: 10px;
+  font-size: x-large;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.scrollMealButtons{
+  width:90%;
+  min-height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0;
+  border-color: #ffffff;
+  border-top: #000000 solid 1px;
+  font-size: x-large;
+  margin: 0 auto;
+  padding:10px;
+}
+
+.mealStyler{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mealStyler p{
+  margin:0;
+  font-style: normal;
+  font-size: x-large;
+  font-weight: normal;
+  color: #000000;
+  flex: 1; 
+}
+
+.analyticsBox{
+  background-color: transparent;
+  border-radius: 30px;
+  text-align: center;
+  width: 900px;
+  height: 700px;
+  display: flex; 
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.mainTitleBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  margin: 0 auto 10px auto;
+
+  position: relative;
+}
+
+.titleBox{
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  width: 400px; 
+  border-radius: 10px;
+}
+
+.mainTitleBox .back{
+  position: absolute;
+  left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  font-size: 20px;
+}
+
+.secondRowContainer{
+  width: 90%;
+  height: 20%;
+  margin: 0 auto;
+  gap: 15px;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.analyticsSummaryBox{
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.heartRateBox{
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.scaleContainer{
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scaleImage{
+  width: 100px; 
+  height: 75px; 
+}
+
+.scaleContainer p{
+  font-size: 18px; 
+  padding: 0px; 
+  margin: 0px; 
+  font-weight: normal;
+  font-style: normal;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.scaleContainer h4{
+  margin: 0px; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.thirdRowContainer{
+  width: 90%;
+  height: 65%;
+  margin: auto;
+  display: flex; 
+  flex-direction: row;
+  gap: 20px;
+}
+
+.leftAnalytics{
+  width: 60%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  gap: 20px;
+}
+
+.leftAnalyticsInnerBox{
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex; 
+  flex-direction: row;
+}
+
+.leftAnalyticsInnerBox2{
+  width: 100%;
+  height: 45%;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex; 
+  flex-direction: column;
+}
+
+.leftAnalyticsInnerBox2 h1{
+  font-size: 28px;
+  margin: 10px auto;
+}
+
+.rightAnalytics{
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.rightAnalytics h1{
+  margin: 10px;
+}
+
+.icons{
+  width:15px;
+  height:15px;
+  margin-top: 8px; 
+  margin-bottom: 8px;
+}
+
+.analyticsItem{
+  height:50px; 
+  display: flex;
+  flex-direction: column;
+  margin: 10px; 
+  padding-left: 10px;
+  align-items: flex-start;
+}
+
+.analyticsItemIconRow{
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+  gap: 5px;
+}
+
+.analyticsItem h4{
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 0; 
+}
+
+.analyticsItem p{
+  font-size: 14px;
+  font-weight: lighter;
+  font-style: normal;
+  margin: 8px;  
+}
+
+.heartContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.centeredText{
+  position:absolute; 
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eatingPaceBox{
+  width: 40%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: left;
+  gap: 0px;
+}
+
+.eatingPaceBox h1{
+  font-size: 25px; 
+  margin: 10px;
+  text-align: left;
+  margin-left: 18px; 
+}
+
+.eatingPaceBox .analyticsItem{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 5px; 
+  text-align: left;
+}
+
+.graphBox{
+  width: 70%; 
+  height: 100%; 
+  margin: 0px; 
+}
+
+.graphBox h4{
+  margin:10px; 
+}
+
+.preMealBox{
+  display: flex; 
+  flex-direction: column;
+  width: 100%; 
+  height: 40%; 
+  text-align: left;
+  padding-left: 10px; 
+  margin: 10px; 
+  gap: 10px; 
+}
+.preMealBox .moodSlider{
+  margin: 0px;
+  border-color: transparent; 
+}
+
+.preMealBox h4{
+  margin:0px; 
+}
+
+.journalBox{
+  width: 80%; 
+  height: 30%; 
+  background-color: #F3F3F3;
+  border: 1px solid #B3B3B3;
+  border-radius: 10px;
+  font-size: 14px; 
+  overflow: scroll;
+  padding: 10px; 
+}
+
+.promptScrollBox{
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  align-items: center;
+  padding:10px;
+}
+
+.promptScrolBoxItem{
+  width: 90%;
+  min-height: 25px;
+  background-color: #F3F3F3;
+  border: #B3B3B3 solid 1px;
+  border-radius: 10px;
+  text-align: left;
+  padding:10px;
+  white-space: normal;     
+  word-break: break-word; 
+  font-size: 14px;       
+}
+
+.promptScrolBoxItem p{
+  margin:0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000000;
+}
+
+.postMealBox{
+  display: flex; 
+  flex-direction: column;
+  width: 700px; 
+  height: 350px; 
+  background-color: #ffffff;
+  border: 1px solid #757575;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+
+.postMealBox2{
+  display: flex; 
+  flex-direction: column;
+  width: 700px; 
+  height: 500px; 
+  background-color: #ffffff;
+  border: 1px solid #757575;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+
+.postMealTextAndButton{
+  position: relative;
+  width: 100%; 
+}
+
+.postMealTextAndButton button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    bottom: 15px; 
+    right: 50px; 
+    margin: 0px;
+    padding: 0px; 
+    height: 40px;
+    width: 40px; 
+}
+
+.promptBox h1{
+  font-size: 100px;
+  margin: 100px; 
+}
+
+.navBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  display: flex;
+  width: 98%; 
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.navBar .Logo {
+  position: relative; 
+  top:auto; 
+  left:auto; 
+  padding: 0px; 
+  width: 200px;
+  height: 40px;
+}
+
+.navBar button{
+  margin: 0px;
+  width: 150px; 
+  font-size: 24px; 
+}
+
+.Logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  width: 200px;
+}
+
+.back{
+  width: 100px;
+  border-radius: 20px;
+  margin-bottom: 20px; 
+  border-color: #9C9C9C;
+  border-width: 1px;
+}
+
+
+.motivationsBox{
+  place-content: center;
+  background-color: #F3F3F3;
+  outline: 1px solid #9C9C9C;
+  border-radius: 30px;
+  text-align: center;
+  width: 700px;
+  height: 600px;
+}
