@@ -29,7 +29,7 @@ And type in your password as required
 git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
 ```
 
-### 4. Install dependencies 
+### 4. Install dependencies and build
 ```bash
 rm -rf node_modules package-lock.json
 npm install
@@ -47,14 +47,14 @@ sudo /home/pi/.nvm/versions/node/v16.20.2/bin/node server.js
 http://dex.local:5000/
 ```
 ## Running just the webapp 
-If you're interested to have a browse around MindfulByte without the connected hardware, you can do so following the steps below!
+If you're interested to have a browse around MindfulByte without the connected hardware, you can run a limited version following the steps below!
 
 ### 1. Clone the Repository
 ```bash
 git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
 ```
 
-### 2. Install dependencies 
+### 2. Install dependencies and build 
 ```bash
 rm -rf node_modules package-lock.json
 npm install
@@ -65,6 +65,16 @@ npm run build
 ```bash
 http://localhost:5000
  ```
+
+You should be able to: 
+- Register a new account with caregiver ID 2 (or alternatively create your own caregiver login and it will be ID 3)
+- On registration complete a reflective motivation exercise 
+- Log in as a User
+- Explore the pre-meal interface 
+- Start a meal (Note that MindfulByte will run a hardware connectivity check, and after a brief delay, the session will terminate automatically as it tells you the smart scale and fork are not connected)
+- Login as caregiver 
+- Look through associated accounts
+
 
 ## Troubleshooting
 ### Bluetooth issues 
