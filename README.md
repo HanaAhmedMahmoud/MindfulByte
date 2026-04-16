@@ -26,7 +26,7 @@ And type in your password as required
 
 ### 3. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
 cd <project-folder>
 ```
 
