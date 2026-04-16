@@ -26,7 +26,7 @@ And type in your password as required
 
 ### 3. Clone the Repository
 ```bash
-git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
+git clone https://github.com/HanaAhmedMahmoud/MindfulByte.git
 ```
 
 ### 4. Install dependencies and build
@@ -51,7 +51,7 @@ If you're interested to have a browse around MindfulByte without the connected h
 
 ### 1. Clone the Repository
 ```bash
-git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
+git clone https://github.com/HanaAhmedMahmoud/MindfulByte.git
 ```
 
 ### 2. Install dependencies and build 
