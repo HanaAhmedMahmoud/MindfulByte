@@ -52,7 +52,6 @@ function Main() {
               <h1>user login</h1>
               <InputField label="Username:" value={username} onChange={setUsername} />
               <InputField label="Password:" value={password} type="password" onChange={setPassword} />
-              {/*to be changed to handle login see function above*/}
               <button onClick={() => handleLogin()}>
                 login
               </button>

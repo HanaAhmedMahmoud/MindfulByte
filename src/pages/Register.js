@@ -18,7 +18,7 @@ const Register = () => {
   const [error, setError] = useState("");
   
   if (!role) {
-    //return navigate('/select-role');
+    return navigate('/select-role');
   }
 
   async function handleRegister() {

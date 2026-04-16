@@ -20,7 +20,6 @@ function Motivations() {
    const [error, setError] = useState(""); 
    
   async function updateRecover(){
-        //some nlp? 
           const payload = {
             id,
             recover: `"I want to recover so that I can ${recover}"`,

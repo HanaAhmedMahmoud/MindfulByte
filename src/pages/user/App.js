@@ -39,8 +39,6 @@ function App() {
     let ws; 
 
     const connectWebSocket = () => {
-      {/*ws://dex.local:8765 */}
-      {/*ws://localhost:8765*/}
       ws = new WebSocket("ws://dex.local:8765");
 
       ws.onopen = () => {

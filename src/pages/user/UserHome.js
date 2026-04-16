@@ -55,7 +55,6 @@ function UserHome() {
       <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="Main.css"/>
       <NavBar/>
       <div className="quoteBox">
-        {/* Ideally this quote switches up from a bank of quotes */}
         <p>"Recovery is not linear"</p>
       </div>
       <div className="twoBoxes">

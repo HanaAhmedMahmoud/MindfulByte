@@ -12,7 +12,6 @@ function Activity() {
   const id = searchParams.get('mealID');
 
   function finish(){
-    //api to get user id in future, for now to login 
     navigate('/' );
   }
 
