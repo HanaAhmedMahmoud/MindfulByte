@@ -4,7 +4,7 @@ const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
 
-// --------- SET UP ---------
+// --- SET UP ---
 
 //python set up
 const { spawn } = require("child_process");
