@@ -33,9 +33,11 @@ git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
 ```bash
 rm -rf node_modules package-lock.json
 npm install
+npm run build 
 ```
 
 ### 5. Run the project from the Server
+In this case I ran it with node 16 on the pi
 ``` bash
 sudo /home/pi/.nvm/versions/node/v16.20.2/bin/node server.js
 ```
@@ -44,7 +46,25 @@ sudo /home/pi/.nvm/versions/node/v16.20.2/bin/node server.js
 ```bash
 http://dex.local:5000/
 ```
+## Running just the webapp 
+If you're interested to have a browse around MindfulByte without the connected hardware, you can do so following the steps below!
 
+### 1. Clone the Repository
+```bash
+git clone [<your-repo-url>](https://github.com/HanaAhmedMahmoud/MindfulByte.git)
+```
+
+### 2. Install dependencies 
+```bash
+rm -rf node_modules package-lock.json
+npm install
+npm run build 
+ ```
+
+### 3. Run webapp 
+```bash
+http://localhost:5000
+ ```
 
 ## Troubleshooting
 ### Bluetooth issues 

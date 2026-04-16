@@ -745,3 +745,17 @@ textarea{
   width: 700px;
   height: 600px;
 }
+
+.noDataMessage{
+  width: 400px; 
+  height: 100px; 
+  background-color: #ffffff;
+  border: 1px solid #757575;
+  font-size: large;
+  border-width: 1px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

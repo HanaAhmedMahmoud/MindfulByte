@@ -12,8 +12,13 @@ function App() {
   const userId = searchParams.get('id'); 
 
   const [prompt, setPrompt] = useState("") 
+  const [hardwareStatus, setHardwareStatus] = useState("connecting") 
 
   async function endMeal(){
+    if (hardwareStatus === "error") {
+      navigate('/');
+      return;
+    }
     await fetch("/stop-sensors", { method: "POST" });
     navigate('/post-meal-questions?mealID=' + id);
   }
@@ -37,15 +42,21 @@ function App() {
   
   useEffect(() => {
     let ws; 
+    let timeoutId;
 
     const connectWebSocket = () => {
       ws = new WebSocket("ws://dex.local:8765");
+
+      timeoutId = setTimeout(() => {
+        setHardwareStatus("error");
+      }, 3000);
 
       ws.onopen = () => {
         console.log("Connected to sensor WebSocket");
       };
 
       ws.onmessage = (event) => {
+        clearTimeout(timeoutId);
         const data = JSON.parse(event.data);
         setPrompt(data.message)
       };
@@ -63,7 +74,10 @@ function App() {
 
     connectWebSocket(); 
   
-    return () => ws && ws.close();
+    return () =>{
+      ws && ws.close();
+      clearTimeout(timeoutId);
+    } 
   }, []);
 
 
@@ -75,7 +89,9 @@ function App() {
           <p>
             <h4>session ongoing</h4>
             <h1>
-              {prompt || "Connecting Sensors..."}
+              {hardwareStatus === "error"
+                ? "No hardware connected"
+                : prompt || "Connecting sensors..."}
             </h1>
             <button onClick={endMeal}>End meal</button>
           </p>
